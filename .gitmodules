@@ -1,0 +1,3 @@
+[submodule "EDM-tracegen"]
+	path = EDM-tracegen
+	url = https://github.com/wegul/EDM-tracegen.git
