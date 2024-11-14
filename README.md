@@ -26,8 +26,9 @@ This repository contains two main components:
 
 ## Getting started
 OS: Ubuntu 22.04  
-SW: Vivado 2023.2  
-HW: Xilinx Alevo U200 FPGA board
+SW: Vivado 2023.2   
+HW: Xilinx Alevo U200 FPGA board  
+Dependency: Python >= 3.9
 #### Installation
     $ git clone https://github.com/wegul/EDM.git
     $ git submodule update --init
