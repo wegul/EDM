@@ -5,7 +5,7 @@ import re
 
 # Get all .log files
 directory = Path('./testdir')
-ccList = ["edm", "ndp", "pfabric", "pfc", "dctcp", "cxl", "fastpass"]
+ccList = ["edm", "ird", "pfabric", "pfc", "dctcp", "cxl", "fastpass"]
 traceList = ["hadoop", "spark", "sparksql", "graphlab", "memcached"]
 expList = [r"wonly*.log", r"ronly*.log", r"mix*.log", r"proced*.log"]
 
