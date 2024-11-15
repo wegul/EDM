@@ -17,13 +17,13 @@ Performance
 
 This repository contains two main components:
 
-1.	FPGA Implementation
+1. FPGA Verification
 - Verilog implementation for Xilinx Alveo U200. [EDM-PHY](https://github.com/wegul/EDM-PHY/tree/master)
 
 2. Hardware Simulation
 - YCSB workload and hw simulator. [hwsimu](https://github.com/wegul/EDM/tree/main/hwsimu)
 
-3.	Network Simulator
+3. Network Simulation
 - Trace file generator based on real-world workloads. [tracegen](https://github.com/wegul/EDM-tracegen/tree/master)
 - 144-node single rack network simulator. [simulator](https://github.com/wegul/EDM/tree/main/netsimu)
 
@@ -31,7 +31,7 @@ This repository contains two main components:
 OS: Ubuntu 22.04  
 SW: Vivado 2023.2   
 HW: Xilinx Alevo U200 FPGA board  
-Dependency: Sklearn, Matplotlib, Pandas, Python >= 3.9 
+Dependency: Sklearn, Matplotlib, Pandas, Python >= 3.9   
 Please do
 
     pip3 install pandas matplotlib scikit-learn
@@ -42,7 +42,7 @@ Please do
     git submodule update --init
 
 
-### A. Hardware verification
+### A. FPGA verification
 Please follow [instructions](https://github.com/wegul/EDM-PHY).
 
 
@@ -74,8 +74,7 @@ This section reproduces Figure-6,7 in artifact evaluation.
 ```
     ./run_all.sh 
 ```
-4. The final results and figures are in _hwsimu/result_. For convenience, the results of our paper is in _hwsimu/result/golden.result_. Since traces are randomly generated, there might be <10% variation.
-
+4. The final results and figures are in _hwsimu/result_. For convenience, the results of our paper is in _hwsimu/golden.result_. Since traces are randomly generated, there might be <10% variation.
 
 
 #### Dataset - YCSB
