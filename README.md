@@ -25,13 +25,16 @@ This repository contains two main components:
 
 3.	Network Simulator
 - Trace file generator based on real-world workloads. [tracegen](https://github.com/wegul/EDM-tracegen/tree/master)
-- 144-node single rack network simulator. [simulator](https://github.com/wegul/EDM/tree/main/simulation)
+- 144-node single rack network simulator. [simulator](https://github.com/wegul/EDM/tree/main/netsimu)
 
 ## Getting started
 OS: Ubuntu 22.04  
 SW: Vivado 2023.2   
 HW: Xilinx Alevo U200 FPGA board  
-Dependency: Matplotlib, Pandas, Python >= 3.9 
+Dependency: Sklearn, Matplotlib, Pandas, Python >= 3.9 
+Please do
+
+    pip3 install pandas matplotlib scikit-learn
 
 #### Installation
     git clone https://github.com/wegul/EDM.git
@@ -71,7 +74,7 @@ This section reproduces Figure-6,7 in artifact evaluation.
 ```
     ./run_all.sh 
 ```
-4. The final results and figures are in _hwsimu/result_.
+4. The final results and figures are in _hwsimu/result_. For convenience, the results of our paper is in _hwsimu/result/golden.result_. Since traces are randomly generated, there might be <10% variation.
 
 
 
@@ -106,35 +109,36 @@ First, build trace generator. Inside _EDM/EDM-tracegen/_ directory:
     make
 ```
 'autoconf' might throw an error. We can ignore and redo.   
-Next, generate traces. This will create  _EDM/simulation/testdir_
+Next, generate traces. This will create  _EDM/netsimu/testdir_
 ```
     cd ./EDM-workload
     ./generate_traces.sh
 ```
-2. **Compile and run simulation:** 
-This will create _EDM/simulation/results/_
+2. **Compile and run:** 
+This will create _EDM/netsimu/results/_
 ```
-    cd EDM/simulation
+    cd EDM/netsimu
     ./compile.sh
     ./run_tests.sh
 ```
-Note that our scripts run every experiment in parallel and spawns >120 screen sessions. Your system might end up killing some of them and result in missing log files. If this happens, please contact us and we will provide access to our server.
+Note:  
+  i) Please do next step after all experiments are finished. You can check via `screen -ls`.  
+  ii) Our script runs every experiment in parallel and spawns >120 screen sessions. Your system might end up killing some of them and result in missing files. In case that happens, please contact us and we will provide access to our server. 
 
 3. **Collect results and plot:**
 ```
-    python3 parse_log.py
-    python3 genplot.py
+     ./get_result.sh
 ```
-The generated graphs are in _EDM/simulation/results/_. Note that for _mixed\_*_ traces, the graph only include three groups because other two pure RREQ and pure WREQ are in _rreq\_result.csv_ and _wreq\_result.csv_, respectively.
+The generated graphs are in _EDM/netsimu/results/_. Note that for _mixed\_*_ traces, the graph only include three groups because other two pure RREQ and pure WREQ are in _rreq\_result.csv_ and _wreq\_result.csv_, respectively.
 
-For convenience, averaged results of our submission is in _EDM/simulation/results/golden.result_. Since the flow traces are randomly generated and ordered, there might be <10% difference.
-
-
+For convenience, averaged results of our submission is in _EDM/netsimu/results/golden.result_. Since the flow traces are randomly generated and ordered, there might be <10% difference.
 
 
 
-<!-- ## Cite
 
+
+## Cite
+```
     @misc{su2024edmultralowlatencyethernet,
         title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation}, 
         author={Weigao Su and Vishal Shrivastav},
@@ -143,4 +147,5 @@ For convenience, averaged results of our submission is in _EDM/simulation/result
         archivePrefix={arXiv},
         primaryClass={cs.OS},
         url={https://arxiv.org/abs/2411.08300}, 
-    } -->
+    }
+```

@@ -1,21 +1,21 @@
 .vscode
-simulation/bin
-simulation/obj
-simulation/out
-simulation/old_experiments
-simulation/old_traces
-simulation/trace*
-simulation/max*
-simulation/experiment*
-simulation/best_case_*
-simulation/balanced_case_*
-simulation/nohup.out
-simulation/mn*
+netsimu/bin
+netsimu/obj
+netsimu/out
+netsimu/old_experiments
+netsimu/old_traces
+netsimu/trace*
+netsimu/max*
+netsimu/experiment*
+netsimu/best_case_*
+netsimu/balanced_case_*
+netsimu/nohup.out
+netsimu/mn*
 *.log
 
 log*
 *.out
-# *.csv
+*.csv
 *.txt
 *.png
 
