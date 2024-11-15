@@ -15,7 +15,9 @@ simulation/mn*
 
 log*
 *.out
-*.csv
+# *.csv
 *.txt
 *.png
 
+# CMAKE
+hwsimu/build/*
