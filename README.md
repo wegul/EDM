@@ -116,7 +116,7 @@ Next, generate traces. This will create  _EDM/netsimu/testdir_
 2. **Compile and run:** 
 This will create _EDM/netsimu/results/_
 ```
-    cd EDM/netsimu
+    cd ../../netsimu
     ./compile.sh
     ./run_tests.sh
 ```
