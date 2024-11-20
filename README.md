@@ -15,7 +15,7 @@ Performance
 
 ## Repository Structure
 
-This repository contains two main components:
+This repository contains three main components:
 
 1. FPGA Verification
 - Verilog implementation for Xilinx Alveo U200. [EDM-PHY](https://github.com/wegul/EDM-PHY/tree/master)
@@ -138,13 +138,10 @@ For convenience, averaged results of our submission is in _EDM/netsimu/results/g
 
 ## Cite
 ```
-    @misc{su2024edmultralowlatencyethernet,
-        title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation}, 
-        author={Weigao Su and Vishal Shrivastav},
-        year={2024},
-        eprint={2411.08300},
-        archivePrefix={arXiv},
-        primaryClass={cs.OS},
-        url={https://arxiv.org/abs/2411.08300}, 
+    @article{su2024edm,
+    title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation},
+    author={Su, Weigao and Shrivastav, Vishal},
+    journal={arXiv preprint arXiv:2411.08300},
+    year={2024}
     }
 ```
