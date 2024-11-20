@@ -3,4 +3,4 @@
 	url = https://github.com/wegul/EDM-tracegen.git
 [submodule "EDM-PHY"]
 	path = EDM-PHY
-	url = git@github.com:wegul/EDM-PHY.git
+	url = https://github.com/wegul/EDM-PHY.git
