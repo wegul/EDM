@@ -48,7 +48,7 @@ Please follow [instructions](https://github.com/wegul/EDM-PHY).
 
 
 ### B. Hardware simulation
-This section reproduces Figure-6,7 in artifact evaluation.
+This section reproduces Figure-4,5 in artifact evaluation.
 
 
 #### Build and run
@@ -95,7 +95,7 @@ Since the distribution of object accesses in YCSB is zipfian, which will affect 
 
 
 ### C. Network simulation
-This section reproduces Figure-8 in artifact evaluation.
+This section reproduces Figure-6 in artifact evaluation.
 
 1. **Build:**  
 
