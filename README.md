@@ -2,6 +2,16 @@
 
 EDM is a novel network fabric design that achieves ultra-low latency memory disaggregation over Ethernet in datacenter environments. This project was published at ASPLOS 2025.
 
+## Cite
+```
+    @inproceedings{su2025edm,
+    title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation},
+    author={Su, Weigao and Shrivastav, Vishal},
+    booktitle={Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1},
+    year={2025}
+    }
+```
+
 ## Overview
 Modern datacenters are moving towards disaggregated architectures where memory resources are separated from compute nodes. However, accessing remote memory over traditional Ethernet networks incurs significant latency overhead. EDM addresses this challenge through two key innovations:
 
@@ -136,12 +146,3 @@ For convenience, averaged results of our submission is in _EDM/netsimu/results/g
 
 
 
-## Cite
-```
-    @article{su2024edm,
-    title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation},
-    author={Su, Weigao and Shrivastav, Vishal},
-    journal={arXiv preprint arXiv:2411.08300},
-    year={2024}
-    }
-```
