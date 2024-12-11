@@ -4,12 +4,12 @@ EDM is a novel network fabric design that achieves ultra-low latency memory disa
 
 ## Cite
 ```
-    @inproceedings{su2025edm,
+@inproceedings{su2025edm,
     title={EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation},
     author={Su, Weigao and Shrivastav, Vishal},
     booktitle={Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1},
     year={2025}
-    }
+}
 ```
 
 ## Overview
@@ -140,7 +140,7 @@ Note:
 ```
 The generated graphs are in _EDM/netsimu/results/_. Note that for _mixed\_*_ traces, the graph only include three groups because other two pure RREQ and pure WREQ are in _rreq\_result.csv_ and _wreq\_result.csv_, respectively.
 
-For convenience, averaged results of our submission is in _EDM/netsimu/results/golden.result_. Since the flow traces are randomly generated and ordered, there might be <10% difference.
+For convenience, averaged results of our submission is in _EDM/netsimu/results/golden.result_.
 
 
 
